@@ -1,0 +1,35 @@
+{% assign background_image = section.settings.product-overview-background-image | img_url: 'master' %}
+<div class="product-overview" style="background-image: url('{{ background_image }}');">
+    <h5>THE FLIGHT</h5>
+    <h1>Discover Your Strength</h1>
+    <span>1650 Reviews</span>
+    <p>Why stress over the perfect strength when you can try them all.</p> 
+    <h3>$20.00</h3>
+    <button>Add to Cart</button>
+    <button>All Product Details</button>
+</div>
+{% schema %}
+{
+  "name": "Product Overview",
+  "settings": [
+  {
+    "type": "image_picker",
+    "label": "Product overview background image",
+    "id": "product-overview-background-image"
+  }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+.product-overview {
+  height: 803px;
+  padding-top: 200px;
+  padding-bottom: 0;
+  background-size: cover;
+  background-position: 100% 0;
+}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

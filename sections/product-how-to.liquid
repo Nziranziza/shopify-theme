@@ -1,0 +1,36 @@
+{% assign background_image = section.settings.product-how-to-background-image | img_url: 'master' %}
+<div class="product-how-to" style="background-image: url('{{ background_image }}');">
+  <h3>USAGE GUIDANCE</h3>
+  <h2>How it works.</h2>
+  <p>
+    Each vial in The Flight contains one dose of Feals at each of the three
+    varying strengths. CBD affects everyone differently, so we recommend working
+    up in strength with one vial per day to find your ideal Feals. For best
+    results, pour an entire vial under your tongue and wait 30 seconds before
+    swallowing.
+  </p>
+</div>
+
+{% schema %} 
+{ "name": "Product how to", 
+"settings": [
+ {
+   "type": "image_picker",
+   "label": "Product how to background image",
+   "id": "product-how-to-background-image"
+ }
+] 
+} 
+{% endschema %}
+
+{% stylesheet %} 
+.product-how-to {
+  margin-top: 0;
+  padding-top: 0;
+  height: 51vw;
+  background-size: cover;
+}
+{% endstylesheet %} 
+
+{% javascript %}
+{% endjavascript %}
