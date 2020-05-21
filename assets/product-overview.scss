@@ -1,0 +1,30 @@
+$base-color: #e69e6c;
+.product-overview-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  button {
+    margin: 5px;
+  }
+  .view-details-btn {
+    border: none;
+    font-size: 1rem;
+    outline:none;
+    &:hover {
+      color: $base-color;
+      text-decoration: none;
+      svg {
+        fill: $base-color;
+      }
+    }
+    text-decoration: underline;
+    color: #a9a39d;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    svg {
+      padding: 5px;
+    }
+  }
+}

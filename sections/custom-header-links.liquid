@@ -1,0 +1,30 @@
+{% for block in section.blocks %}
+   <a href="#">{{ block.settings.custom-header-link }}</a>
+{% endfor %}
+{% schema %}
+{
+  "name": "Custom Header Link",
+  "blocks": [
+  {
+    "type": "text",
+    "name": "Header Link",
+    "settings": [
+    {
+      "type": "text",
+      "label": "Header link",
+      "id": "custom-header-link"
+    }
+    ]
+  }
+  ]
+}
+{% endschema %}
+
+{% javascript %}
+{% endjavascript %}
+
+{% stylesheet %}
+#shopify-section-custom-header-links {
+  display: inline
+}
+{% endstylesheet %}

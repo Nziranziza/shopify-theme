@@ -1,12 +1,18 @@
-<div>
-  <h3>{{ section.settings.new-to-cbd-heading }}</h3>
-  <h2>{{ section.settings.new-to-cbd-sub-heading }}</h2>
-  <p>{{ section.settings.new-to-cbd-description }}</p>
-  <div>
-    {% for block in section.blocks %}
-      <img src={{ block.settings.new-to-cbd-image | img_url: 'master' }} />
-      <span>{{ block.settings.new-to-cbd-image-heading }}</span>
-    {% endfor %}
+<div class="container">
+  <div class="new-to-cbd">
+    <div class="new-to-cbd--header">
+      <h3 class="new-to-cbd--heading h3-heading">{{ section.settings.new-to-cbd-heading }}</h3>
+      <h2 class="new-to-cbd--subheading h2-heading">{{ section.settings.new-to-cbd-sub-heading }}</h2>
+      <div class="new-to-cbd-description description">{{ section.settings.new-to-cbd-description }}</div>
+    </div>
+    <div class="new-to-cbd--content">
+      {% for block in section.blocks %}
+      <div class="new-to-cbd--content--item">
+        <img src={{ block.settings.new-to-cbd-image | img_url: 'master' }} />
+        <span>{{ block.settings.new-to-cbd-image-heading }}</span>
+      </div>
+      {% endfor %}
+    </div>
   </div>
 </div>
 

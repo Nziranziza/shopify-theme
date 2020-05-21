@@ -1,5 +1,145 @@
 {
-  "current": "Default",
+  "current": {
+    "checkout_header_image": "",
+    "checkout_logo_image": "",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#197bbd",
+    "checkout_button_color": "#197bbd",
+    "checkout_error_color": "#e32c2b",
+    "sections": {
+      "new-to-cbd": {
+        "type": "new-to-cbd",
+        "blocks": {
+          "1589450509998": {
+            "type": "image",
+            "settings": {
+              "new-to-cbd-image": "shopify:\/\/shop_images\/600.png",
+              "new-to-cbd-image-heading": "600 MG"
+            }
+          },
+          "1589450672925": {
+            "type": "image",
+            "settings": {
+              "new-to-cbd-image": "shopify:\/\/shop_images\/1200.png",
+              "new-to-cbd-image-heading": "1200 MG"
+            }
+          },
+          "1589450680598": {
+            "type": "image",
+            "settings": {
+              "new-to-cbd-image": "shopify:\/\/shop_images\/2400.png",
+              "new-to-cbd-image-heading": "2400 MG"
+            }
+          }
+        },
+        "block_order": [
+          "1589450509998",
+          "1589450672925",
+          "1589450680598"
+        ],
+        "settings": {
+          "new-to-cbd-heading": "NEW TO CBD?",
+          "new-to-cbd-sub-heading": "Here’s where to begin.",
+          "new-to-cbd-description": "<p>We created a flight so you could try all 3 strengths and determine which is best for you.<\/p>"
+        }
+      },
+      "product-overview": {
+        "type": "product-overview",
+        "settings": {
+          "product-overview-background-image": "shopify:\/\/shop_images\/overview-background.jpg"
+        }
+      },
+      "product-how-to": {
+        "type": "product-how-to",
+        "settings": {
+          "product-how-to-background-image": "shopify:\/\/shop_images\/how-to-image.jpg"
+        }
+      },
+      "product-testmonial": {
+        "type": "product-testmonial",
+        "blocks": {
+          "1589640892081": {
+            "type": "image",
+            "settings": {
+              "product-testmonial-text": "Julia uses CBD to alleviate the stress of getting her MD",
+              "product-testmonial-image": "shopify:\/\/shop_images\/julia.jpg"
+            }
+          },
+          "1589641091928": {
+            "type": "image",
+            "settings": {
+              "product-testmonial-text": "Rashid uses CBD to ease his social anxiety.",
+              "product-testmonial-image": "shopify:\/\/shop_images\/rashid.jpg"
+            }
+          },
+          "1589641140248": {
+            "type": "image",
+            "settings": {
+              "product-testmonial-text": "Kate & Matty found CBD after nothing else worked.",
+              "product-testmonial-image": "shopify:\/\/shop_images\/mattyandkate.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "1589640892081",
+          "1589641091928",
+          "1589641140248"
+        ],
+        "settings": {}
+      },
+      "custom-header-links": {
+        "type": "custom-header-links",
+        "blocks": {
+          "1589817221554": {
+            "type": "text",
+            "settings": {
+              "custom-header-link": "What's CBD?"
+            }
+          },
+          "1589818094624": {
+            "type": "text",
+            "settings": {
+              "custom-header-link": "Stories"
+            }
+          },
+          "1589818126871": {
+            "type": "text",
+            "settings": {
+              "custom-header-link": "Quality"
+            }
+          },
+          "1589818164488": {
+            "type": "text",
+            "settings": {
+              "custom-header-link": "Help"
+            }
+          }
+        },
+        "block_order": [
+          "1589817221554",
+          "1589818094624",
+          "1589818126871",
+          "1589818164488"
+        ],
+        "settings": {}
+      },
+      "top-announcement": {
+        "type": "top-announcement",
+        "settings": {
+          "top-bar-announcement": "WE’RE STILL SHIPPING: DELIVERED IN 4-6 BUSINESS DAYS."
+        }
+      }
+    },
+    "content_for_index": []
+  },
   "presets": {
     "Default": {}
   }

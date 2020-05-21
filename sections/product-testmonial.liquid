@@ -1,0 +1,98 @@
+{% assign slider_background_image = 'next.png' | asset_img_url %}
+{% assign play_button_background_image = 'play.png' | asset_img_url %}
+<div class="product-testmonial">
+  {% for block in section.blocks %}
+    <div class="product-testmonial-slide">
+      <img src={{ block.settings.product-testmonial-image | img_url: 'master' }} class="slider-image"/>
+      <div class="product-testmonial-video">
+        <button style="background-image: url('{{ play_button_background_image }}');"></button>
+        <span>{{ block.settings.product-testmonial-text}}</span>
+      </div>
+    </div>
+  {% endfor %}
+  <div class="product-testmonial-title">
+      <h5>Stories</h5>
+      <h2>See how CBD is helping people feel better.</h2>
+  </div>
+  <div class="product-testmonial-action-buttons">
+    <button id="previous" style="background-image: url('{{ slider_background_image }}');"></button>
+    <button id="next" style="background-image: url('{{ slider_background_image }}');"></button>
+  </div>
+</div>
+
+{% schema %}
+{
+    "name": "Product testmonial",
+    "settings": [
+    ],
+    "blocks": [
+    {
+        "type": "image",
+        "name": "Product testmonial",
+        "settings": [
+        {
+            "type": "text",
+            "label": "Product Testmonial text",
+            "id": "product-testmonial-text"
+        },
+        {
+          "type": "image_picker",
+          "label": "Product testmonial image",
+          "id": "product-testmonial-image"
+        }
+        ]
+    }
+    ]
+}
+{% endschema %}
+
+{% stylesheet %}
+.product-testmonial img {
+  width: 100%;
+}
+{% endstylesheet %}
+
+{% javascript %}
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  if(n === 1) {
+    showSlides(slideIndex += n, 'left');
+  }
+  else {
+    showSlides(slideIndex += n, 'right');
+  }
+}
+
+function showSlides(n, direction) {
+  var i;
+  var slides = document.getElementsByClassName("product-testmonial-slide");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  if(direction) {
+    if(direction === 'left') {
+      slides[slideIndex-1].classList.remove('product-testmonial-slide-fade-right')
+    } else {
+      slides[slideIndex-1].classList.remove('product-testmonial-slide-fade-left')
+    }
+    slides[slideIndex-1].classList.add(`product-testmonial-slide-fade-${direction}`)
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+const nextBtn = document.getElementById('next');
+nextBtn.addEventListener('click', () => {
+  plusSlides(1);
+});
+
+
+const previousBtn = document.getElementById('previous');
+previous.addEventListener('click', () => {
+  plusSlides(-1);
+});
+
+{% endjavascript %}
+{{ "product-testmonial.js" | asset_url | script_tag }}

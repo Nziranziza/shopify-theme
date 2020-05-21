@@ -1,13 +1,25 @@
 {% assign background_image = section.settings.product-overview-background-image | img_url: 'master' %}
 <div class="product-overview" style="background-image: url('{{ background_image }}');">
-    <h5>THE FLIGHT</h5>
-    <h1>Discover Your Strength</h1>
+  <div class="container">
+    <h5>{{ product.title }}</h5>
+    <h3 class="h2-heading">Discover Your Strength</h3>
     <span>1650 Reviews</span>
-    <p>Why stress over the perfect strength when you can try them all.</p> 
-    <h3>$20.00</h3>
-    <button>Add to Cart</button>
-    <button>All Product Details</button>
+    <p class="description">Why stress over the perfect strength when you can try them all.</p>
+    <h3>{{ product.selected_or_first_available_variant.price | money }}</h3>
+    <div class="product-overview-buttons">
+      <button class="add-to-cart">Add to Cart</button>
+      <button class="view-details-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" class="mr-2" style="width: 26px; height: 26px;">
+          <path fill="#C5B9AC" fill-rule="evenodd"
+            d="M13 26C5.82 26 0 20.18 0 13S5.82 0 13 0s13 5.82 13 13-5.82 13-13 13zM7 13.817h4.896v4.919h1.92v-4.92h4.897V11.93h-4.896V7h-1.92v4.93H7v1.887z">
+          </path>
+        </svg>
+        All Product Details
+      </button>
+    </div>
+  </div>
 </div>
+{{ "product-overview.scss.css" | asset_url | stylesheet_tag }}
 {% schema %}
 {
   "name": "Product Overview",
